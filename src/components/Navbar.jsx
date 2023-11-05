@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="">
       <div>
-        <div className="navbar bg-base-100 rounded border border-b-8 mt-1 border-black">
+        <div className="navbar bg-base-100 rounded  border-b-8 mt-1 border-black">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -34,14 +34,14 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink activeClassName="active" to="/">Home</NavLink>
                 </li>
 
                 <li>
                   <NavLink to="/addJob">Add Job</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/myPostJobs">My Jobs</NavLink>
+                  <NavLink to="/myPostedJobs">My Jobs</NavLink>
                 </li>
                 <li>
                   <NavLink to="/myBids">My Bids</NavLink>
@@ -60,14 +60,14 @@ const Navbar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink activeClassName="active"  to="/">Home</NavLink>
               </li>
 
               <li>
               <NavLink to="/addJob">Add Job</NavLink>
               </li>
               <li>
-                <NavLink to="/myPostJobs">My Jobs</NavLink>
+                <NavLink to="/myPostedJobs">My Jobs</NavLink>
               </li>
               <li>
                 <NavLink to="/myBids">My Bids</NavLink>
