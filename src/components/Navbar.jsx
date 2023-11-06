@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="">
       <div>
-        <div className="navbar bg-base-100 rounded  border-b-8 mt-1 border-black">
+        <div className="navbar bg-slate-800 text-white rounded  border-black">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -53,7 +53,7 @@ const Navbar = () => {
             </div>
             <img
               className="h-16 w-40"
-              src="https://i.ibb.co/WFnB0VZ/logoa.png"
+              src="https://i.ibb.co/gM2XnKf/Black-White-Elegant-Monogram-Initial-Name-Logo-1.png"
               alt=""
             />
           </div>
