@@ -2,8 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {
-    color: red; /* Change the text color for the active link */
-    font-weight: bold; /* Add a bold font for the active link */
-    /* Add any other styles you want for the active link */
-  }

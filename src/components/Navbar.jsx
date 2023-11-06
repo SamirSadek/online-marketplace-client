@@ -8,9 +8,9 @@ const Navbar = () => {
     logOut().then().catch();
   };
   return (
-    <div className="">
+    <div className="bg-slate-800">
       <div>
-        <div className="navbar bg-slate-800 text-white rounded  border-black">
+        <div className="navbar max-w-7xl mx-auto   text-white rounded  border-black">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -34,7 +34,7 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <NavLink activeClassName="active" to="/">Home</NavLink>
+                  <NavLink to="/">Home</NavLink>
                 </li>
 
                 <li>
@@ -60,7 +60,7 @@ const Navbar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <NavLink activeClassName="active"  to="/">Home</NavLink>
+                <NavLink  to="/">Home</NavLink>
               </li>
 
               <li>

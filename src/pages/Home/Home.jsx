@@ -1,8 +1,9 @@
+import TabBasedCategory from "../../components/TabBasedCategory";
 
 const Home = () => {
     return (
         <div>
-            Home
+           <TabBasedCategory></TabBasedCategory>
         </div>
     );
 };

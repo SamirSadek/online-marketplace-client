@@ -1,4 +1,5 @@
 
+import Swal from "sweetalert2";
 
 const AddJob = () => {
   const handleAddJob = (event) => {
@@ -35,6 +36,14 @@ const AddJob = () => {
     .then(res  =>res.json())
     .then(data =>{
       console.log(data)
+      if(data.insertedId){
+        Swal.fire({
+          title: "Successfully Added",
+          text:'Do you want to continue',
+          icon:'success',
+          confirmButtonText:'Cool'
+        })
+      }
     })
   }
    
