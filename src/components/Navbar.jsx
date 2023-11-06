@@ -33,7 +33,7 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li>
+                <li  >
                   <NavLink to="/">Home</NavLink>
                 </li>
 
@@ -60,20 +60,20 @@ const Navbar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <NavLink  to="/">Home</NavLink>
+                <NavLink className='hover:font-bold hover:text-white'  to="/">Home</NavLink>
               </li>
 
               <li>
-              <NavLink to="/addJob">Add Job</NavLink>
+              <NavLink className='hover:font-bold hover:text-white' to="/addJob">Add Job</NavLink>
               </li>
               <li>
-                <NavLink to="/myPostedJobs">My Jobs</NavLink>
+                <NavLink className='hover:font-bold hover:text-white' to="/myPostedJobs">My Jobs</NavLink>
               </li>
               <li>
-                <NavLink to="/myBids">My Bids</NavLink>
+                <NavLink className='hover:font-bold hover:text-white' to="/myBids">My Bids</NavLink>
               </li>
               <li>
-                <NavLink to="/bidRequests">Bid Requests</NavLink>
+                <NavLink className='hover:font-bold hover:text-white' to="/bidRequests">Bid Requests</NavLink>
               </li>
             </ul>
           </div>
