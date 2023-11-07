@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 const WebDevCard = ({ webDevJob }) => {
   const {
+    _id,
     employerEmail,
     title,
     deadline,
@@ -22,9 +25,11 @@ const WebDevCard = ({ webDevJob }) => {
               Price Range:{minPrice}$-{maxPrice}$
             </h2>
 
+            <Link to={`jobDetail/${_id}`}>
             <button className="btn bg-base-300 hover:bg-slate-700 hover:text-white">
               Bid Now
             </button>
+          </Link>
           </div>
         </div>
       </div>

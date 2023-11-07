@@ -1,13 +1,20 @@
-
-import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../providers/AuthProvider";
 
-const AddJob = () => {
+const UpdateJob = () => {
+  const job = useLoaderData();
+  const {
+    _id,
+    employerEmail,
+    title,
+    deadline,
+    category,
+    minPrice,
+    maxPrice,
+    description,
+  } = job;
 
-  const {user} = useContext(AuthContext)
-
-  const handleAddJob = (event) => {
+  const handleUpdate = (event) => {
     
     
     event.preventDefault();
@@ -20,7 +27,8 @@ const AddJob = () => {
     const minPrice = form.minPrice.value;
     const maxPrice = form.maxPrice.value;
     const description = form.description.value;
-    const newJob = {
+    const updatedJob = {
+      
       employerEmail,
       title,
       deadline,
@@ -30,22 +38,22 @@ const AddJob = () => {
       description,
     };
 
-    console.log(newJob);
+    console.log(updatedJob);
     // send data to server
-    fetch('http://localhost:5000/addJob',{
-      method: 'POST',
+    fetch(`http://localhost:5000/addJob/${_id}`,{
+      method: 'PUT',
       headers: {
         'content-type':'application/json'
       },
-      body: JSON.stringify(newJob)
+      body: JSON.stringify(updatedJob)
     })
     .then(res  =>res.json())
     .then(data =>{
       console.log(data)
-      if(data.insertedId){
+      if(data.modifiedCount){
         Swal.fire({
-          title: "Successfully Added",
-          text:'Do you want to continue',
+          title: "Successful",
+          text:'Job Updated Successfully',
           icon:'success',
           confirmButtonText:'Cool'
         })
@@ -53,12 +61,13 @@ const AddJob = () => {
     })
   }
    
+
   return (
-    <div className="bg-slate-400 py-4"><h2 className="text-4xl font-bold text-center mt-4 w-1/2 mx-auto border border-slate-900 rounded p-4 bg-slate-800 text-white">Post Your Job</h2>
+    <div className="bg-slate-400 py-4"><h2 className="text-4xl font-bold text-center w-1/2 mx-auto border-t-8 border-t-white text-white rounded p-4 bg-slate-800">Update Job: {title}</h2>
     <div className=" bg-slate-400 p-20 w-2/3 mx-auto">
       
     
-      <form  onSubmit={handleAddJob}>
+      <form className=""  onSubmit={handleUpdate}>
         <div className="md:flex gap-10 justify-center ">
           <div className="form-control w-full ">
             <label className="label">
@@ -67,7 +76,7 @@ const AddJob = () => {
             <input
               type="text"
               name="employerEmail"
-              defaultValue={user?.email}
+              defaultValue={employerEmail}
               readOnly
               className="input input-bordered border-slate-900 w-full "
             />
@@ -79,7 +88,7 @@ const AddJob = () => {
             <input
               type="text"
               name="title"
-              placeholder="Job Title"
+              defaultValue={title}
               required
               className="input input-bordered border-slate-900 w-full "
             />
@@ -93,6 +102,7 @@ const AddJob = () => {
             <input
               type="Date"
               name="deadline"
+              defaultValue={deadline}
               required
               className="input input-bordered border-slate-900 w-full "
             />
@@ -118,7 +128,7 @@ const AddJob = () => {
               type="number"
               name="minPrice"
               required
-              placeholder="Minimum Price"
+              defaultValue={minPrice}
               className="input input-bordered border-slate-900 w-full "
             />
           </div>
@@ -129,7 +139,7 @@ const AddJob = () => {
             <input
               type="number"
               name="maxPrice"
-              placeholder="Maximum Price"
+              defaultValue={maxPrice}
               required
               className="input input-bordered border-slate-900 w-full "
             />
@@ -143,7 +153,7 @@ const AddJob = () => {
           <input
             type="textarea"
             name="description"
-            placeholder="Enter Your Job Description"
+            defaultValue={description}
             required
             className="input input-bordered border-slate-900 w-full "
           />
@@ -153,7 +163,7 @@ const AddJob = () => {
           <input
             className="md:w-1/4 btn  btn-ghost border border-slate-900 bg-slate-800 text-white"
             type="submit"
-            value="Add Job"
+            value="Update Job"
           />
         </div>
       </form>
@@ -162,4 +172,4 @@ const AddJob = () => {
   );
 };
 
-export default AddJob;
+export default UpdateJob;

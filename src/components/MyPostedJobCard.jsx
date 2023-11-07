@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyPostedJobCard = ({ myPostedJob }) => {
@@ -14,6 +15,21 @@ const MyPostedJobCard = ({ myPostedJob }) => {
   } = myPostedJob;
 
   const [isDeleted, setIsDeleted] = useState(false)
+
+  
+
+//   const handleUpdate = id =>{
+//     const [data, setData] = useState(null)
+
+//     useEffect(()=>{
+//         fetch(`http://localhost:5000/addJob/${id}`)
+//         .then(res => res.json())
+//         .then(data =>{
+//             setData(data)
+//         })
+//       },[id])
+    
+//   }
 
   const handleDelete = (id) => {
     console.log(_id);
@@ -62,9 +78,12 @@ const MyPostedJobCard = ({ myPostedJob }) => {
             Price Range:{minPrice}$-{maxPrice}$
           </h2>
           <div className="flex gap-5">
-            <button className="btn bg-base-300 hover:bg-slate-700 hover:text-white">
+            <Link to={`/updateJob/${_id}`}>
+            <button 
+            className="btn bg-base-300 hover:bg-slate-700 hover:text-white">
               Update
             </button>
+            </Link>
             <button
               onClick={() => handleDelete(_id)}
               className="btn hover:bg-red-700 hover:text-white"
