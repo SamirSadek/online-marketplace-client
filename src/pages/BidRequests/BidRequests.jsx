@@ -21,7 +21,23 @@ const BidRequests = () => {
 
   const bidRequests = allBidRequests.filter(allBidRequest=> allBidRequest.employerEmail === user.email)
   return (
-    <div className="pt-10 text-black">
+    <div className=" text-black">
+        <div
+        className="hero h-96"
+        style={{
+          backgroundImage:
+            "url(https://i.ibb.co/XXCM4Sq/White-and-Blue-Playful-Illustration-Career-Guides-Linked-In-Article-Cover-Image-1.png)",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content content-start text-neutral-content">
+          <div className="max-w-md">
+          <h2 className="text-4xl font-bold text-center">
+          Bid Requests
+        </h2>
+          </div>
+        </div>
+      </div>
       <div className="overflow-x-auto max-w-7xl mx-auto">
         <table className="table">
           {/* head */}
@@ -36,6 +52,8 @@ const BidRequests = () => {
             </tr>
           </thead>
           <tbody>
+
+            
             
           {bidRequests.map((bidRequest) => 
                 <BidRequestTableRow

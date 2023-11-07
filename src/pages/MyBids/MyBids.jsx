@@ -9,7 +9,23 @@ const MyBids = () => {
   const myBidJobs = allBidJobs.filter(allBidJob => allBidJob.bidderEmail === user?.email)
 
   return (
-    <div className="pt-10 text-black">
+    <div className=" text-black">
+        <div
+        className="hero h-96"
+        style={{
+          backgroundImage:
+            "url(https://i.ibb.co/MRHyf4b/Blue-And-White-Illustration-Freelance-Linked-In-Banner-1.png)",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content content-start text-neutral-content">
+          <div className="max-w-md">
+          <h2 className="text-4xl font-bold text-center">
+          My Bided Jobs
+        </h2>
+          </div>
+        </div>
+      </div>
       <div className="overflow-x-auto max-w-7xl mx-auto">
         <table className="table">
           {/* head */}

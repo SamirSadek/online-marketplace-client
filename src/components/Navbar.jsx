@@ -8,7 +8,7 @@ const Navbar = () => {
     logOut().then().catch();
   };
   return (
-    <div className="bg-black">
+    <div className="bg-slate-800">
       <div>
         <div className="navbar max-w-7xl mx-auto   text-white rounded  border-black">
           <div className="navbar-start">
