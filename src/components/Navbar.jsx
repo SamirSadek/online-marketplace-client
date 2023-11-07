@@ -8,7 +8,7 @@ const Navbar = () => {
     logOut().then().catch();
   };
   return (
-    <div className="bg-slate-800">
+    <div className="bg-black">
       <div>
         <div className="navbar max-w-7xl mx-auto   text-white rounded  border-black">
           <div className="navbar-start">
@@ -53,7 +53,7 @@ const Navbar = () => {
             </div>
             <img
               className="h-16 w-40"
-              src="https://i.ibb.co/gM2XnKf/Black-White-Elegant-Monogram-Initial-Name-Logo-1.png"
+              src="https://i.ibb.co/S5CfNHJ/logoaa.png"
               alt=""
             />
           </div>

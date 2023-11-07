@@ -35,6 +35,7 @@ const JobDetail = () => {
       jobTitle,
       maxPrice,
       description,
+      status : 'pending'
     };
     console.log(bidJob);
 
