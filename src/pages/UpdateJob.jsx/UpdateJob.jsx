@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateJob = () => {
   const job = useLoaderData();
+  const navigate = useNavigate()
   const {
     _id,
     employerEmail,
@@ -56,6 +57,8 @@ const UpdateJob = () => {
           text:'Job Updated Successfully',
           icon:'success',
           confirmButtonText:'Cool'
+        }).then(()=>{
+          return navigate('/myPostedJobs')
         })
       }
     })

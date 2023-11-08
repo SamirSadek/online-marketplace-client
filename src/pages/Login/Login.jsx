@@ -52,8 +52,8 @@ const Login = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <img
-              className="lg:block hidden"
-              src="https://i.ibb.co/mB1djjz/undraw-secure-login-pdn4.png"
+              className="lg:block hidden w-[600px]"
+              src="https://i.ibb.co/r5VLsJ7/undraw-Safe-re-kiil.png"
               alt=""
             />
           </div>

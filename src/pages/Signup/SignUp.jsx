@@ -76,8 +76,8 @@ const SignUp = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <img
-              className="lg:block hidden"
-              src="https://i.ibb.co/dbGK4m9/undraw-Authentication-re-svpt.png"
+              className="lg:block hidden w-[600px]"
+              src="https://i.ibb.co/r5VLsJ7/undraw-Safe-re-kiil.png"
               alt=""
             />
           </div>
