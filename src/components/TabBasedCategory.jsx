@@ -5,7 +5,7 @@ import WebDevCard from "./WebDevCard";
  import GraphicsDesignCard from "./GraphicsDesignCard";
 import DigitalMarketingCard from "./DigitalMarketingCard";
 const TabBasedCategory = () => {
-  const jobs = useLoaderData();
+  const jobs = useLoaderData() 
   const webDevJobs = jobs.filter((job) => job.category === "web development");
    const digitalMarketingJobs = jobs.filter(
     (job) => job.category === "digital marketing"

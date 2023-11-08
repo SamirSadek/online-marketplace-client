@@ -10,17 +10,19 @@ import SignUp from "../pages/Signup/SignUp";
 import UpdateJob from "../pages/UpdateJob.jsx/UpdateJob";
 import JobDetail from "../components/JobDetail";
 import PrivateRoute from "./PrivateRoute";
+import Error from "../components/Error";
 
 
 const router = createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement: <Error></Error>,
         children:[
             {
                 path:'/',
                 element: <Home></Home>,
-                loader:() =>fetch('http://localhost:5000/addJob')
+                loader:() =>fetch('http://localhost:5000/addJob',)
             },
             {
                 path:'addJob',
@@ -29,22 +31,22 @@ const router = createBrowserRouter([
             {
                 path:'updateJob/:id',
                 element: <UpdateJob></UpdateJob>,
-                loader:({params}) => fetch(`http://localhost:5000/addJob/${params.id}`)
+                loader:({params}) => fetch(`http://localhost:5000/addJob/${params.id}`,)
             },
             {
                 path:'jobDetail/:id',
                 element: <PrivateRoute><JobDetail></JobDetail></PrivateRoute>,
-                loader:({params}) => fetch(`http://localhost:5000/addJob/${params.id}`)
+                loader:({params}) => fetch(`http://localhost:5000/addJob/${params.id}`,)
             },
             {
                 path:'myPostedJobs',
                 element: <PrivateRoute><MyPostedJob></MyPostedJob></PrivateRoute>,
-                loader:() =>fetch('http://localhost:5000/addJob')
+                loader:() =>fetch('http://localhost:5000/addJob',{credentials: 'include'})
             },
             {
                 path:'myBids',
                 element: <PrivateRoute><MyBids></MyBids></PrivateRoute>,
-                loader:() =>fetch('http://localhost:5000/bidJob')
+                loader:() =>fetch('http://localhost:5000/bidJob',{credentials: 'include'})
                 
             },
             {
