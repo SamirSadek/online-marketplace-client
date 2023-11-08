@@ -55,14 +55,14 @@ const AddJob = () => {
         className="hero h-96"
         style={{
           backgroundImage:
-            "url(https://i.ibb.co/X7DYSLK/White-and-Blue-Playful-Illustration-Career-Guides-Linked-In-Article-Cover-Image.png)",
+            "url(https://i.ibb.co/X4yJsmH/blue-and-white-modern-shapes-linkedin-article-cover-image.png)",
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content content-start text-neutral-content">
           <div className="max-w-md">
           <h2 className="text-4xl font-bold text-center">
-          Post Your Job
+          Lets Post Your Job
         </h2>
           </div>
         </div>

@@ -14,7 +14,7 @@ const MyBids = () => {
         className="hero h-96"
         style={{
           backgroundImage:
-            "url(https://i.ibb.co/MRHyf4b/Blue-And-White-Illustration-Freelance-Linked-In-Banner-1.png)",
+            "url(https://i.ibb.co/5sh1t9F/Colorful-Ilustrated-Hiring-Banner-Landscape.png)",
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>

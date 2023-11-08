@@ -24,7 +24,7 @@ const MyPostedJob = () => {
         className="hero h-96"
         style={{
           backgroundImage:
-            "url(https://i.ibb.co/MRHyf4b/Blue-And-White-Illustration-Freelance-Linked-In-Banner-1.png)",
+            "url(https://i.ibb.co/9Ng03jY/Blue-3-D-Cute-IT-Security-Event-Banner.png)",
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
