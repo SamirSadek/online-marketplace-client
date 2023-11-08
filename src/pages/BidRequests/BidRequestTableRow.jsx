@@ -8,7 +8,7 @@ const BidRequestTableRow = ({ bidRequest }) => {
   const [currentStatus, setCurrentStatus] = useState(status);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bidJob/${_id}`)
+    fetch(`https://online-marketplace-server-five.vercel.app/bidJob/${_id}`)
       .then((res) => res.json())
       .then((data) => {
         setCurrentStatus(data.status);
@@ -19,7 +19,7 @@ const BidRequestTableRow = ({ bidRequest }) => {
   }, [_id]);
 
   const acceptHandle = (id) => {
-    fetch(`http://localhost:5000/bidJob/${id}`, {
+    fetch(`https://online-marketplace-server-five.vercel.app/bidJob/${id}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json',
@@ -45,7 +45,7 @@ const BidRequestTableRow = ({ bidRequest }) => {
   };
 
   const cancelHandle = (id) => {
-    fetch(`http://localhost:5000/bidJob/${id}`, {
+    fetch(`https://online-marketplace-server-five.vercel.app/bidJob/${id}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json',
@@ -125,7 +125,7 @@ export default BidRequestTableRow;
 
 //   useEffect(() => {
    
-//     fetch(`http://localhost:5000/bidJob/${_id}`)
+//     fetch(`https://online-marketplace-server-five.vercel.app/bidJob/${_id}`)
 //       .then((res) => res.json())
 //       .then((data) => {
 //         setCurrentStatus(data.status); 
@@ -136,7 +136,7 @@ export default BidRequestTableRow;
 //   }, [_id]);
 
 //   const acceptHandle = (id) => {
-//     fetch(`http://localhost:5000/bidJob/${id}`, {
+//     fetch(`https://online-marketplace-server-five.vercel.app/bidJob/${id}`, {
 //       method: 'PATCH',
 //       headers: {
 //         'content-type': 'application/json',
@@ -162,7 +162,7 @@ export default BidRequestTableRow;
 //   };
 
 //   const cancelHandle = (id) => {
-//     fetch(`http://localhost:5000/bidJob/${id}`, {
+//     fetch(`https://online-marketplace-server-five.vercel.app/bidJob/${id}`, {
 //       method: 'PATCH',
 //       headers: {
 //         'content-type': 'application/json',

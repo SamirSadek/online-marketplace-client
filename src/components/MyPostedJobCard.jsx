@@ -22,7 +22,7 @@ const MyPostedJobCard = ({ myPostedJob }) => {
 //     const [data, setData] = useState(null)
 
 //     useEffect(()=>{
-//         fetch(`http://localhost:5000/addJob/${id}`)
+//         fetch(`https://online-marketplace-server-five.vercel.app/addJob/${id}`)
 //         .then(res => res.json())
 //         .then(data =>{
 //             setData(data)
@@ -43,7 +43,7 @@ const MyPostedJobCard = ({ myPostedJob }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addJob/${id}`,{
+        fetch(`https://online-marketplace-server-five.vercel.app/addJob/${id}`,{
             method: 'DELETE'
         })
           .then((res) => res.json())

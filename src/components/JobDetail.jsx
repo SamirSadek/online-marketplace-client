@@ -40,7 +40,7 @@ const JobDetail = () => {
     };
     console.log(bidJob);
 
-    fetch('http://localhost:5000/bidJob',{
+    fetch('https://online-marketplace-server-five.vercel.app/bidJob',{
       method: 'POST',
       headers: {
         'content-type':'application/json'

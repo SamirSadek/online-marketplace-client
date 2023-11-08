@@ -9,7 +9,7 @@ const BidRequests = () => {
  
   useEffect(() => {
     // Replace the URL with the correct endpoint to fetch bid requests
-    fetch('http://localhost:5000/bidJob',{credentials:'include'})
+    fetch('https://online-marketplace-server-five.vercel.app/bidJob',{credentials:'include'})
       .then((res) => res.json())
       .then((data) => {
         setAllBidRequests(data);

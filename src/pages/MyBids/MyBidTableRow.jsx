@@ -9,7 +9,7 @@ const MyBidTableRow = ({ myBidJob }) => {
   const [currentStatus, setCurrentStatus] = useState(status);
 
   const handleComplete = (id) => {
-    fetch(`http://localhost:5000/bidJob/${id}`, {
+    fetch(`https://online-marketplace-server-five.vercel.app/bidJob/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
