@@ -38,7 +38,8 @@ const BidRequests = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-x-auto max-w-7xl mx-auto">
+      {
+        bidRequests.length>0 ? <div className="overflow-x-auto max-w-7xl mx-auto my-20">
         <table className="table">
           {/* head */}
           <thead>
@@ -64,7 +65,8 @@ const BidRequests = () => {
             
           </tbody>
         </table>
-      </div>
+      </div> : <div className="max-w-7xl mx-auto text-center my-44">You Have No Bid Requests</div>
+      }
     </div>
   );
 };

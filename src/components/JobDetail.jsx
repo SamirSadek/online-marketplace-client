@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const JobDetail = () => {
     const {user}= useContext(AuthContext)
   const jobDetails = useLoaderData();
+  const navigate =useNavigate()
   const {
     _id,
     employerEmail,
@@ -55,8 +56,12 @@ const JobDetail = () => {
           text:'Do you want to continue',
           icon:'success',
           confirmButtonText:'Cool'
-        })
+        }).then(() => {
+          navigate("/myBids"); // Navigate to the home page or any other route
+        });
+        
       }
+      
     })
   }
   return (

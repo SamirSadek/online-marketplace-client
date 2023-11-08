@@ -26,7 +26,8 @@ const MyBids = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-x-auto max-w-7xl mx-auto">
+      {
+        myBidJobs.length>0 ? <div className="overflow-x-auto max-w-7xl mx-auto my-20">
         <table className="table">
           {/* head */}
           <thead>
@@ -47,7 +48,8 @@ const MyBids = () => {
             
           </tbody>
         </table>
-      </div>
+      </div> : <div className="max-w-7xl mx-auto text-center my-44">You didnt Bid on any jobs</div>
+      }
     </div>
   );
 };

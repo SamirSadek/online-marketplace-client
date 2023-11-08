@@ -45,7 +45,8 @@ const Hero = () => {
                   type="radio"
                   name="rating-9"
                   className="mask mask-star-2 bg-yellow-500"
-                  checked
+                  checked={true}
+                  readOnly
                 />
               </div>
             </div>
@@ -92,7 +93,8 @@ const Hero = () => {
                   type="radio"
                   name="rating-9"
                   className="mask mask-star-2 bg-yellow-500"
-                  checked
+                  checked={true}
+                  readOnly
                 />
               </div>
             </div>
@@ -139,7 +141,8 @@ const Hero = () => {
                   type="radio"
                   name="rating-9"
                   className="mask mask-star-2 bg-yellow-500"
-                  checked
+                  checked={true}
+                  readOnly
                 />
               </div>
             </div>

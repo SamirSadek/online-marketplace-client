@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const AddJob = () => {
   const { user } = useContext(AuthContext);
-
+  const navigate = useNavigate()
   const handleAddJob = (event) => {
     event.preventDefault();
 
@@ -44,7 +45,11 @@ const AddJob = () => {
             text: "Do you want to continue",
             icon: "success",
             confirmButtonText: "Cool",
-          });
+          }).then(()=>{
+            return navigate("/myPostedJobs")
+          }
+            
+          )
         }
       });
   };
