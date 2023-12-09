@@ -8,6 +8,14 @@ github server-side repository-https://github.com/Porgramming-Hero-web-course/b8a
 
 
 🌐 Live Site: https://online-marketplace-481d3.web.app/
+
+## Used Technology
+<div align="center">
+    <img src="https://skillicons.dev/icons?i=react,html,css,vscode,github,tailwind,git" /><br>
+    <img src="https://skillicons.dev/icons?i=nodejs,javascript,express,firebase,mongodb,jwt" /><br>
+</div>
+
+
 ## Features and Functionalities
 
 * **Navigation and Layout:** Consistent Navbar and Footer on all pages, excluding the 404 page.Meaningful footer with website logo, copyright notice, contact information, social media links, and address.
